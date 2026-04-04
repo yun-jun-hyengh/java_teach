@@ -61,7 +61,10 @@ public class Example05 {
 	// Animal animal = new Tiger()
 	// Animal animal = new Eagle()
 	public void moveAnimal(Animal animal) {
+		// 현재 매개변수 타입이 Animal(부모) 객체임 
+		// 그러나 실제로 값이 들어오는 건 Human, Tiger, Eagle 임 
 		animal.move(); // 이 한줄의 코드가 다형성을 나타내고 있는 것 !! 
+		// 즉) 부모 타입 하나로 여러 자식객체를 받아서 각자 다르게 동작하도록 설계함 
 	}
 	
 	public static void main(String[] args) {
