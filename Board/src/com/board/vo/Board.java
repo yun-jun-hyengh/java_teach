@@ -19,6 +19,11 @@ public class Board {
 		this.date = date;
 	}
 	
+	public Board(String title, String content) {
+		this.title = title;
+		this.content = content;
+	}
+	
 	public int getIdx() {
 		return idx;
 	}
