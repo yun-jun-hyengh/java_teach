@@ -16,6 +16,10 @@ public class UserDAO {
 			return;
 		}
 		String id = ScannerUtil.nextLine("아이디 입력 >> ");
+		if(users.containsKey(id)) {
+			System.out.println("이미 존재하는 아이디 입니다.");
+			return;
+		}
 		String pw = ScannerUtil.nextLine("비밀번호 입력 >> ");
 		String nickname = ScannerUtil.nextLine("닉네임 입력 >> ");
 		User newUser = new User(id, pw, nickname);
