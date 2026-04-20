@@ -3,13 +3,13 @@ package com.board.vo;
 import java.util.Date;
 
 public class Board {
-	private String idx; // 게시글 번호
+	private int idx; // 게시글 번호
 	private String writer; // 게시글 작성자
 	private String title; // 게시글 제목
 	private String content; // 게시글 내용
-	private Date date; // 작성일자 
+	private String date; // 작성일자 
 	
-	public Board(String idx, String writer, String title, String content, Date date) {
+	public Board(int idx, String writer, String title, String content, String date) {
 		this.idx = idx;
 		this.writer = writer;
 		this.title = title;
@@ -17,10 +17,10 @@ public class Board {
 		this.date = date;
 	}
 	
-	public String getIdx() {
+	public int getIdx() {
 		return idx;
 	}
-	public void setIdx(String idx) {
+	public void setIdx(int idx) {
 		this.idx = idx;
 	}
 	public String getWriter() {
@@ -41,10 +41,10 @@ public class Board {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	
