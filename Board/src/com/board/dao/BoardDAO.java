@@ -1,8 +1,8 @@
-package com.board.service;
+package com.board.dao;
 
 import com.board.util.ScannerUtil;
 
-public class BoardService {
+public class BoardDAO {
 	
 	public static void signUp() {
 		String id = ScannerUtil.nextLine("아이디 >> ");

@@ -8,6 +8,15 @@ public class Board {
 	private String title; // 게시글 제목
 	private String content; // 게시글 내용
 	private Date date; // 작성일자 
+	
+	public Board(String idx, String writer, String title, String content, Date date) {
+		this.idx = idx;
+		this.writer = writer;
+		this.title = title;
+		this.content = content;
+		this.date = date;
+	}
+	
 	public String getIdx() {
 		return idx;
 	}

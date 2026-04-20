@@ -4,6 +4,13 @@ public class User {
 	private String id; // 아이디
 	private String pw; // 비밀번호
 	private String nickname; // 닉네임 
+	
+	public User(String id, String pw, String nickname) {
+		this.id = id;
+		this.pw = pw;
+		this.nickname = nickname;
+	}
+	
 	public String getId() {
 		return id;
 	}

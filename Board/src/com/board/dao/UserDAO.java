@@ -1,8 +1,13 @@
-package com.board.service;
+package com.board.dao;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import com.board.util.ScannerUtil;
+import com.board.vo.User;
 
-public class UserService {
+public class UserDAO {
+	public static Map<String, User> users = new HashMap<>();
 	
 	public static void signup() {
 		String id = ScannerUtil.nextLine("아이디 입력 >> ");
