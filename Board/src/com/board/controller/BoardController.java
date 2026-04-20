@@ -30,9 +30,9 @@ public class BoardController {
 			} else if(choice == 3) {
 				boardDao.writerBoard();
 			} else if(choice == 4) {
-				
+				boardDao.boardList();
 			} else if(choice == 5) {
-				
+				boardDao.boardDelete();
 			} else if(choice == 6) {
 				
 			} else if(choice == 7) {

@@ -12,6 +12,9 @@ public class UserDAO {
 	
 	// 회원가입
 	public void signup() {
+		if(session != null) {
+			return;
+		}
 		String id = ScannerUtil.nextLine("아이디 입력 >> ");
 		String pw = ScannerUtil.nextLine("비밀번호 입력 >> ");
 		String nickname = ScannerUtil.nextLine("닉네임 입력 >> ");
