@@ -83,4 +83,28 @@ public class BoardDAO {
 	}
 	
 	// 게시글 수정 
+	public void boardUpdate() {
+		if(UserDAO.session == null) {
+			System.out.println("로그인을 하지 않았습니다. 로그인을 진행해 주세요");
+			return;
+		}
+		int idx = ScannerUtil.nextInt("수정할 게시글 번호 >> ");
+		if(!board.containsKey(idx)) {
+			System.out.println("해당 번호의 게시글이 존재하지 않습니다.");
+			return;
+		}
+		
+		Board bo = board.get(idx);
+		if(!bo.getUser_id().equals(UserDAO.session.getId())) {
+			System.out.println("본인이 작성한 글만 수정할 수 있습니다.");
+			return;
+		}
+		
+		String newTitle = ScannerUtil.nextLine("수정할 제목 입력 >> ");
+		String newContent = ScannerUtil.nextLine("수정할 내용 입력 >> ");
+		Board updateBoard = new Board(idx, bo.getUser_id(), bo.getWriter(), 
+				newTitle, newContent, bo.getDate());
+		board.put(idx, updateBoard);
+		System.out.println("[" + idx + "]번 게시글이 수정완료되었습니다.");
+	}
 }

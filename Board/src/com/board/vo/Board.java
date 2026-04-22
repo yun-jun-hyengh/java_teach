@@ -1,7 +1,5 @@
 package com.board.vo;
 
-import java.util.Date;
-
 public class Board {
 	private int idx; // 게시글 번호
 	private String user_id; // 작성자 아이디 
@@ -19,10 +17,11 @@ public class Board {
 		this.date = date;
 	}
 	
-	public Board(String title, String content) {
-		this.title = title;
-		this.content = content;
-	}
+//	public Board(int idx, String title, String content) {
+//		this.idx = idx;
+//		this.title = title;
+//		this.content = content;
+//	}
 	
 	public int getIdx() {
 		return idx;

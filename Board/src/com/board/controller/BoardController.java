@@ -34,7 +34,7 @@ public class BoardController {
 			} else if(choice == 5) {
 				boardDao.boardDelete();
 			} else if(choice == 6) {
-				
+				boardDao.boardUpdate();
 			} else if(choice == 7) {
 				userDao.logout();
 			} else if(choice == 8) {
